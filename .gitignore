@@ -1,0 +1,22 @@
+# 默认忽略新增文件；只放行本公开包约定的文档。
+*
+!.gitignore
+!README.md
+!LICENSE
+!skills/
+!skills/dave-video-workflow/
+!skills/dave-video-workflow/SKILL.md
+!skills/dave-video-workflow/agents/
+!skills/dave-video-workflow/agents/openai.yaml
+!skills/dave-video-workflow/references/
+!skills/dave-video-workflow/references/*.md
+!examples/
+!examples/*.md
+
+# 即使位于放行目录，也不收录常见本地敏感或临时文件。
+**/.env*
+**/.DS_Store
+**/*私密*
+**/*私人*
+**/*聊天记录*
+**/*备份*
