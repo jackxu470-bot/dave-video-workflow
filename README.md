@@ -20,7 +20,7 @@
 
 | 任务 | 所需能力 |
 | --- | --- |
-| 读取和执行 Skill | 支持 Agent Skills 的 AI 助手，例如 Codex |
+| 读取和执行 Skill | 支持 Agent Skills 的 AI 助手，例如 Codex、WorkBuddy |
 | 实际剪辑、字幕和 MG 上时间线 | 已连接且具有相应权限的视频编辑工具；本工作流以 ChatCut 为主要使用场景 |
 | 从音视频生成带时间的字幕 | 编辑工具的转写能力或用户提供的带时间字幕 |
 | 生成封面图片 | 可用的图像生成或设计工具，或者用户提供的图片 |
@@ -54,6 +54,12 @@ Skill 不包含 ChatCut、工具插件、API 密钥、字体、模型额度或�
 只做这一步，给我 10 个标题、1 版正文和 10 个相关标签，不制作封面。
 ```
 
+## 在 WorkBuddy 中配合 ChatCut 使用
+
+先 [下载 Skill 专用导入包](downloads/dave-video-workflow-skill.zip)，在 WorkBuddy 的 **专家·技能·连接器 → 技能 → 添加技能 → 上传技能** 中导入并启用。再连接自己的 ChatCut：本机项目使用 ChatCut Desktop 的 **Agents on this computer**；云端项目按 [ChatCut 的 WorkBuddy 专用指南](https://chatcut.io/workbuddy) 安装连接。导入 Skill 与连接视频工具是两件事。
+
+详细步骤、连接检查和可复制的制作请求见 **[WorkBuddy + ChatCut 使用说明](docs/workbuddy-chatcut.md)**。该说明依据官方文档整理，导入包尚未在 WorkBuddy 客户端实测。[WorkBuddy 官方技能说明](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)
+
 ## 仓库结构
 
 ```text
@@ -69,13 +75,17 @@ skills/dave-video-workflow/
     └── files-and-handoff.md
 examples/
 └── fictional-walkthrough.md
+docs/
+└── workbuddy-chatcut.md
+downloads/
+└── dave-video-workflow-skill.zip
 ```
 
 参见 [技能入口](skills/dave-video-workflow/SKILL.md) 和 [虚构示例](examples/fictional-walkthrough.md)。示例仅用于解释工作方式，没有实际音视频，也没有经过完整媒体制作验证。
 
 ## 素材与隐私
 
-使用者应把自己的项目和素材放在仓库外。仓库的 `.gitignore` 只放行约定目录中的 Markdown 文档、Skill 显示配置以及根目录说明和许可证，减少误提交素材的机会。新增脚本、图片或配置文件时，要先检查内容再有意修改放行规则。忽略规则不能清除已经提交的内容，也不能代替人工检查。
+使用者应把自己的项目和素材放在仓库外。仓库的 `.gitignore` 只放行约定目录中的 Markdown 文档、Skill 显示配置、从公开文件制作的专用导入包以及根目录说明和许可证，减少误提交素材的机会。新增脚本、图片或配置文件时，要先检查内容再有意修改放行规则。忽略规则不能清除已经提交的内容，也不能代替人工检查。
 
 不要把密钥、登录状态、项目资产 ID、个人路径、客户资料、聊天记录或真实项目内容写入公开贡献。修改工作流时优先用虚构示例。
 
@@ -87,4 +97,6 @@ examples/
 
 - [OpenAI：Skill 的组成与工具边界](https://developers.openai.com/plugins/concepts/skills)
 - [OpenAI：构建 Skill](https://learn.chatgpt.com/docs/build-skills)
+- [ChatCut：WorkBuddy 安装指南](https://chatcut.io/workbuddy)
+- [WorkBuddy：技能管理](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)
 - [GitHub：忽略文件](https://docs.github.com/en/get-started/git-basics/ignoring-files)

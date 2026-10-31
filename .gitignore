@@ -20,3 +20,9 @@
 **/*私人*
 **/*聊天记录*
 **/*备份*
+
+# 公开使用说明与由公开 Skill 源文件制作的专用导入包。
+!docs/
+!docs/*.md
+!downloads/
+!downloads/dave-video-workflow-skill.zip
